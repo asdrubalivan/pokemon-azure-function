@@ -4,8 +4,8 @@ import requests
 
 app = func.FunctionApp(http_auth_level=func.AuthLevel.ANONYMOUS)
 
-@app.route(route="QueryPokemon")
-def QueryPokemon(req: func.HttpRequest) -> func.HttpResponse:
+@app.route(route="query_pokemon")
+def query_pokemon(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Processing request for Pokémon query.')
 
     # Retrieve "pokemon" from query string or request body; default to 'pikachu'
